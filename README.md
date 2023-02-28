@@ -12,11 +12,20 @@ Data Wrangler is a code-centric data cleaning tool that is integrated into VS Co
 
 ## Setting up your environment
 
-1. If you have not already done so, install [Python](https://www.python.org/downloads/).
+1. If you have not already done so, install [Python](https://www.python.org/downloads/).  
+   **IMPORTANT:** Make sure to install Python 3.7 or higher.
 2. Install [VS Code](https://code.visualstudio.com/download).
 3. Install the Data Wrangler extension for VS Code from the Visual Studio Marketplace. For additional details on installing extensions, see Extension Marketplace. The Data Wrangler extension is named Data Wrangler and it’s published by Microsoft.
 
 When you launch Data Wrangler for the first time, it will ask you which Python kernel you would like to connect to. It will also check your machine and environment to see if any required Python packages are installed (e.g., Pandas).
+
+> Here is a list of the required versions for Python and Python packages, along with whether they are automatically installed by Data Wrangler:
+> 
+> | Name   | Minimum required version | Automatically installed |
+> | ------ | ------------------------ | ----------------------- |
+> | Python | 3.7                      | No                      |
+> | pandas | 0.25.0                   | Yes                     |
+> | regex  | 2020.11.13               | Yes                     |
 
 If they are not found on your environment, Data Wrangler will attempt to install them for you via pip. If Data Wrangler is unable to install dependencies, the easiest workaround is to manually run pip install, and then launch Data Wrangler again. These dependencies are required for Data Wrangler such that it can generate Python and Pandas code.
 
