@@ -13,7 +13,7 @@ Data Wrangler is a code-centric data cleaning tool that is integrated into VS Co
 ## Setting up your environment
 
 1. If you have not already done so, install [Python](https://www.python.org/downloads/).  
-   **IMPORTANT:** Make sure to install Python 3.7 or higher.
+   **IMPORTANT:** Data Wrangler only supports Python version 3.7 or higher.
 2. Install [VS Code](https://code.visualstudio.com/download).
 3. Install the Data Wrangler extension for VS Code from the Visual Studio Marketplace. For additional details on installing extensions, see Extension Marketplace. The Data Wrangler extension is named Data Wrangler and it’s published by Microsoft.
 
