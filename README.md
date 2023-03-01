@@ -2,13 +2,13 @@
 
 Data Wrangler is a code-centric data cleaning tool that is integrated into VS Code and VS Code Jupyter Notebooks. Data Wrangler aims to increase the productivity of data scientists doing data cleaning by providing a rich user interface that automatically generates Pandas code for and shows insightful column statistics and visualizations. This document will cover how to:
 
-- Install and setup Data Wrangler
-- Launch Data Wrangler from a notebook
-- Use Data Wrangler to explore your data
-- Perform operations on your data 
-- Use AI to generate code
-- Edit and export code for data wrangling to a notebook
-- Troubleshooting and providing feedback
+-   Install and setup Data Wrangler
+-   Launch Data Wrangler from a notebook
+-   Use Data Wrangler to explore your data
+-   Perform operations on your data
+-   Use AI to generate code
+-   Edit and export code for data wrangling to a notebook
+-   Troubleshooting and providing feedback
 
 ## Setting up your environment
 
@@ -20,12 +20,14 @@ Data Wrangler is a code-centric data cleaning tool that is integrated into VS Co
 When you launch Data Wrangler for the first time, it will ask you which Python kernel you would like to connect to. It will also check your machine and environment to see if any required Python packages are installed (e.g., Pandas).
 
 > Here is a list of the required versions for Python and Python packages, along with whether they are automatically installed by Data Wrangler:
-> 
-> | Name   | Minimum required version | Automatically installed |
-> | ------ | ------------------------ | ----------------------- |
-> | Python | 3.7                      | No                      |
-> | pandas | 0.25.0                   | Yes                     |
-> | regex  | 2020.11.13               | Yes                     |
+>
+> | Name    | Minimum required version | Automatically installed |
+> | ------- | ------------------------ | ----------------------- |
+> | Python  | 3.7                      | No                      |
+> | pandas  | 0.25.0                   | Yes                     |
+> | regex*  | 2020.11.13               | Yes                     |
+>
+> _* We use the open source Python `regex` library in order to support Unicode character classes to simplify complex expressions, since Python's built-in regex module (`re`) doesn't support it._
 
 If they are not found on your environment, Data Wrangler will attempt to install them for you via pip. If Data Wrangler is unable to install dependencies, the easiest workaround is to manually run pip install, and then launch Data Wrangler again. These dependencies are required for Data Wrangler such that it can generate Python and Pandas code.
 
@@ -41,7 +43,7 @@ If you are in a Jupyter Notebook working with Pandas data frames, you’ll now s
 
 ### Launching Data Wrangler directly from a CSV file
 
-You can also launch Data Wrangler directly from a local CSV file. To do so, open any folder in VS Code that has the CSV dataset you’d like to explore. In the File Explorer panel, right click the .CSV dataset and click “Open in Data Wrangler”. 
+You can also launch Data Wrangler directly from a local CSV file. To do so, open any folder in VS Code that has the CSV dataset you’d like to explore. In the File Explorer panel, right click the .CSV dataset and click “Open in Data Wrangler”.
 
 ![image](https://user-images.githubusercontent.com/2180824/218180054-386cf32a-8876-48dd-8065-134d0bd932f0.png)
 
@@ -59,7 +61,7 @@ The **Operations Panel** is where you can search through all of Data Wrangler’
 
 The **Summary Panel** shows detailed summary statistics for your dataset or a specific column if one is selected. Depending on the datatype, it will show information such as min, max values, datatype of the column, skew, and more.
 
-The **Operation History Panel** shows a human readable list of all the operations that have been previously applied in the current Data Wrangling session. It enables the user to undo specific operations or edit the most recent operation.  Selecting a step will highlight the changes in the data grid and will show the generated code associated with that operation. 
+The **Operation History Panel** shows a human readable list of all the operations that have been previously applied in the current Data Wrangling session. It enables the user to undo specific operations or edit the most recent operation. Selecting a step will highlight the changes in the data grid and will show the generated code associated with that operation.
 
 The **Code Preview** section will show the Python and Pandas code that Data Wrangler has generated when an operation. It will remain blank when no operation is selected. The code can even be edited by the user, and the data grid will highlight the effect on the data.
 
@@ -115,34 +117,34 @@ Note: If you launched Data Wrangler directly from a CSV, the first export option
 
 These are the Data Wrangler operations that are currently supported in the initial launch of Data Wrangler (with many more to be added in the near future).
 
-| Operation | Description |
-|---|---|
-| Sort values | Sort column(s) ascending or descending |
-| Filter | Filter rows based on one or more conditions |
-| Calculate text length | Create new column with values equal to the length of each string value in a text column |
-| One-hot encode | Split categorical data into a new column for each category |
-| Multi-label binarizer | Split categorical data into a new column for each category using a delimiter |
-| Create column from formula | Create a column using a custom Python formula |
-| Change column type | Change the data type of a column |
-| Drop column | Delete one or more columns |
-| Select column | Choose one or more columns to keep and delete the rest |
-| Rename column | Rename one or more columns |
-| Drop missing values | Remove rows with missing values |
-| Drop duplicate rows  | Drops all rows that have duplicate values in one or more columns |
-| Fill missing values | Replace cells with missing values with a new value |
-| Find and replace | Replace cells with exact matching pattern |
-| Group by column and aggregate | Group by columns and aggregate results |
-| Strip whitespace | Remove whitespace from the beginning and end of text |
-| Split text | Split a column into several columns based on a user defined delimiter |
-| Convert text to capital case | Capitalize the first character of a string with the option to apply to all words |
-| Convert text to lowercase | Convert text to lowercase |
-| Convert text to uppercase | Convert text to UPPERCASE |
-| String transform by example | Automatically perform string transformations when a pattern is detected from the examples you provide |
-| DateTime formatting by example | Automatically perform DateTime formatting when a pattern is detected from the examples you provide |
-| New column by example | Automatically create a column when a pattern is detected from the examples you provide. |
-| Scale min/max values | Scale a numerical column between a minimum and maximum value |
-| Describe your operation | Generate code using natural language |
-| Custom operation | Automatically create a new column based on examples and the derivation of existing column(s) |
+| Operation                      | Description                                                                                           |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| Sort values                    | Sort column(s) ascending or descending                                                                |
+| Filter                         | Filter rows based on one or more conditions                                                           |
+| Calculate text length          | Create new column with values equal to the length of each string value in a text column               |
+| One-hot encode                 | Split categorical data into a new column for each category                                            |
+| Multi-label binarizer          | Split categorical data into a new column for each category using a delimiter                          |
+| Create column from formula     | Create a column using a custom Python formula                                                         |
+| Change column type             | Change the data type of a column                                                                      |
+| Drop column                    | Delete one or more columns                                                                            |
+| Select column                  | Choose one or more columns to keep and delete the rest                                                |
+| Rename column                  | Rename one or more columns                                                                            |
+| Drop missing values            | Remove rows with missing values                                                                       |
+| Drop duplicate rows            | Drops all rows that have duplicate values in one or more columns                                      |
+| Fill missing values            | Replace cells with missing values with a new value                                                    |
+| Find and replace               | Replace cells with exact matching pattern                                                             |
+| Group by column and aggregate  | Group by columns and aggregate results                                                                |
+| Strip whitespace               | Remove whitespace from the beginning and end of text                                                  |
+| Split text                     | Split a column into several columns based on a user defined delimiter                                 |
+| Convert text to capital case   | Capitalize the first character of a string with the option to apply to all words                      |
+| Convert text to lowercase      | Convert text to lowercase                                                                             |
+| Convert text to uppercase      | Convert text to UPPERCASE                                                                             |
+| String transform by example    | Automatically perform string transformations when a pattern is detected from the examples you provide |
+| DateTime formatting by example | Automatically perform DateTime formatting when a pattern is detected from the examples you provide    |
+| New column by example          | Automatically create a column when a pattern is detected from the examples you provide.               |
+| Scale min/max values           | Scale a numerical column between a minimum and maximum value                                          |
+| Describe your operation        | Generate code using natural language                                                                  |
+| Custom operation               | Automatically create a new column based on examples and the derivation of existing column(s)          |
 
 ## Troubleshooting
 
@@ -153,7 +155,7 @@ If you run into a UnicodeDecodeError when opening a data file directly from Data
 1. The file you're trying to open has an encoding other than utf-8, and/or
 2. The file is corrupted.
 
-To work around this error, you’ll need to open Data Wrangler from a Jupyter Notebook instead of directly from a data file. Use a Jupyter Notebook to read the file using Pandas, for example using the [read_csv](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html) method. Within that read method, use the *encoding* and/or *encoding_errors* parameters to define the encoding to use or how to handle encoding errors. If you don’t know which encoding might work for this file, you can try a library such as [chardet](https://github.com/chardet/chardet) to try to infer an encoding that works.
+To work around this error, you’ll need to open Data Wrangler from a Jupyter Notebook instead of directly from a data file. Use a Jupyter Notebook to read the file using Pandas, for example using the [read_csv](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html) method. Within that read method, use the _encoding_ and/or _encoding_errors_ parameters to define the encoding to use or how to handle encoding errors. If you don’t know which encoding might work for this file, you can try a library such as [chardet](https://github.com/chardet/chardet) to try to infer an encoding that works.
 
 ## Questions and feedback
 
