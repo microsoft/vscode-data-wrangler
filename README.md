@@ -27,7 +27,7 @@ When you launch Data Wrangler for the first time, it will ask you which Python k
 > | pandas  | 0.25.0                   | Yes                     |
 > | regex*  | 2020.11.13               | Yes                     |
 >
-> _* We use the open source Python `regex` library in order to support Unicode character classes to simplify complex expressions, since Python's regex module doesn't support it._
+> _* We use the open source Python `regex` library in order to support Unicode character classes to simplify complex expressions, since Python's built-in regex module (`re`) doesn't support it._
 
 If they are not found on your environment, Data Wrangler will attempt to install them for you via pip. If Data Wrangler is unable to install dependencies, the easiest workaround is to manually run pip install, and then launch Data Wrangler again. These dependencies are required for Data Wrangler such that it can generate Python and Pandas code.
 
