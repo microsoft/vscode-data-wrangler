@@ -160,3 +160,6 @@ To work around this error, you’ll need to open Data Wrangler from a Jupyter No
 ## Questions and feedback
 
 If you have problems, have feature requests, or any other feedback, please submit an Issue on our GitHub repository: [https://github.com/microsoft/vscode-data-wrangler/issues/new/choose](https://github.com/microsoft/vscode-data-wrangler/issues/new/choose)
+
+## Privacy Statement
+The [Microsoft Enterprise and Developer Privacy Statement](https://privacy.microsoft.com/en-US/privacystatement) describes the privacy statement of this software.
