@@ -6,7 +6,6 @@ Data Wrangler is a code-centric data cleaning tool that is integrated into VS Co
 -   Launch Data Wrangler from a notebook
 -   Use Data Wrangler to explore your data
 -   Perform operations on your data
--   Use AI to generate code
 -   Edit and export code for data wrangling to a notebook
 -   Troubleshooting and providing feedback
 
@@ -84,20 +83,6 @@ Once we select an operation, we are brought into the Operation Preview state whe
 Once the parameters are entered in the operation panel, we can see a preview of what will happen to the data. We’ll notice that the minimum value in age is now 18 in the Quick Insights, along with a visual preview of the rows that are being removed highlighted in red. Finally, we’ll also notice the Code Preview section automatically shows the code that Data Wrangler produced to execute this Filter operation. We can edit this code, such as change the filtered age to 21, and the data grid will automatically update accordingly.
 
 After confirming that the operation has the intended effect, we can click Apply.
-
-## Generate code using AI
-
-Data Wrangler supports AI-powered features for generating code. You will first need to supply your OpenAI API token in the Data Wrangler settings. See [OpenAI](https://openai.com/) for more details or to make an account.
-
-To invoke the feature, select "Describe your operation" from the Operation Panel and describe your intent in natural language. In the example shown below, we describe our operation as, _"Fill missing values in the ‘Age’ column with the highest value."_
-
-![image](https://user-images.githubusercontent.com/2180824/218180882-f36133ae-5934-46db-a810-92812d6e8ce3.png)
-
-After clicking “Generate code”, Data Wrangler uses AI to produce a code snippet:
-
-![image](https://user-images.githubusercontent.com/2180824/218180912-2623f96a-45d7-4049-813c-7f440279592e.png)
-
-If the code preview looks correct, you may click Apply. In this example, the AI-generated code worked on the first attempt. However, you can edit your description to add more detail and try again if needed.
 
 ## Editing and exporting code
 
