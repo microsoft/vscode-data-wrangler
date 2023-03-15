@@ -1,6 +1,10 @@
 # Data Wrangler in VS Code
 
-Data Wrangler is a code-centric data cleaning tool that is integrated into VS Code and VS Code Jupyter Notebooks. Data Wrangler aims to increase the productivity of data scientists doing data cleaning by providing a rich user interface that automatically generates Pandas code for and shows insightful column statistics and visualizations. This document will cover how to:
+Data Wrangler is a code-centric data cleaning tool that is integrated into VS Code and VS Code Jupyter Notebooks. Data Wrangler aims to increase the productivity of data scientists doing data cleaning by providing a rich user interface that automatically generates Pandas code for and shows insightful column statistics and visualizations.
+
+[<img src="https://user-images.githubusercontent.com/8560030/225425356-c0abf8e2-332f-439c-8de1-9a5946b933ee.png" />](https://youtu.be/KrzcV1c1W1U)
+
+This document will cover how to:
 
 -   Install and setup Data Wrangler
 -   Launch Data Wrangler from a notebook
@@ -24,11 +28,31 @@ When you launch Data Wrangler for the first time, it will ask you which Python k
 > | ------- | ------------------------ | ----------------------- |
 > | Python  | 3.7                      | No                      |
 > | pandas  | 0.25.0                   | Yes                     |
-> | regex*  | 2020.11.13               | Yes                     |
+> | regex\* | 2020.11.13               | Yes                     |
 >
-> _* We use the open-source `regex` package to be able to use Unicode properties (for example, `/\p{Lowercase_Letter}/`), which aren't supported by Python's built-in regex module (`re`). Unicode properties make it easier and cleaner to support foreign characters in regular expressions._
+> _\* We use the open-source `regex` package to be able to use Unicode properties (for example, `/\p{Lowercase_Letter}/`), which aren't supported by Python's built-in regex module (`re`). Unicode properties make it easier and cleaner to support foreign characters in regular expressions._
 
 If they are not found on your environment, Data Wrangler will attempt to install them for you via pip. If Data Wrangler is unable to install dependencies, the easiest workaround is to manually run pip install, and then launch Data Wrangler again. These dependencies are required for Data Wrangler such that it can generate Python and Pandas code.
+
+### Connecting to a Python kernel
+
+There are currently two ways to connect to a Python kernel, as shown in the quick pick below.  
+![image](https://user-images.githubusercontent.com/8560030/225400310-cea6cf16-de2e-484d-b3d9-3c60ecb36b50.png)
+
+#### 1. Connect using local Python interpreter
+
+If this option is selected, then the kernel connection is created using the Jupyter and Python extensions. We recommend this option for a simple setup and quick way to get started with Data Wrangler.
+
+#### 2. Connect using Jupyter URL and token
+
+If this option is selected, then a kernel connection is created using JupyterLab APIs. Note that there are performance benefits with this option since it bypasses some initialization and kernel discovery processes. However, it will also require separate user management of the Jupyter notebook server. We recommend this option generally in two cases: 1) if there are blocking issues in the first method and 2) for power users who would like to reduce the cold-start time of Data Wrangler.
+
+To set up a Jupyter notebook server and use it with this option, follow the steps below:
+
+1. Install Jupyter. We recommend installing the free version of [Anaconda](https://www.anaconda.com/products/individual) which comes with Jupyter installed. Alternatively, follow the [official instructions](https://jupyter.org/install) to install it.
+2. In the appropriate environment (e.g. in an Anaconda prompt if Anaconda is used), launch the server with the following command (replace the jupyter token with your secure token):
+   `jupyter notebook --no-browser --NotebookApp.token='<your-jupyter-token>'`
+3. In Data Wrangler, connect using the address of the spawned server. E.g. http://localhost:8888 and pass in the token used in the previous step. Once configured, this information is cached locally and can automatically be reused for future connections.
 
 ## Launching Data Wrangler
 
@@ -133,6 +157,10 @@ These are the Data Wrangler operations that are currently supported in the initi
 
 ## Troubleshooting
 
+### General kernel connectivity issues
+
+For general connectivity issues, please see the "Connecting to a Python kernel" section above on alternative methods to connect. To clear an already cached kernel, you can run the `Data Wrangler: Clear cached runtime` command from the command palette (Ctrl/Cmd+Shift+P).
+
 ### UnicodeDecodeError
 
 If you run into a UnicodeDecodeError when opening a data file directly from Data Wrangler, then this could be caused by two possible issues:
@@ -147,4 +175,5 @@ To work around this error, you’ll need to open Data Wrangler from a Jupyter No
 If you have problems, have feature requests, or any other feedback, please submit an Issue on our GitHub repository: [https://github.com/microsoft/vscode-data-wrangler/issues/new/choose](https://github.com/microsoft/vscode-data-wrangler/issues/new/choose)
 
 ## Privacy Statement
+
 The [Microsoft Enterprise and Developer Privacy Statement](https://privacy.microsoft.com/en-US/privacystatement) describes the privacy statement of this software.
