@@ -176,4 +176,4 @@ If you have problems, have feature requests, or any other feedback, please submi
 
 ## Privacy Statement
 
-The [Microsoft Enterprise and Developer Privacy Statement](https://privacy.microsoft.com/en-US/privacystatement) describes the privacy statement of this software.
+The [Microsoft Enterprise and Developer Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) describes the privacy statement of this software.
