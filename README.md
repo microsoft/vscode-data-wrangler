@@ -1,6 +1,6 @@
 # Data Wrangler Extension for Visual Studio Code Insiders
 
-> :warning: **Data Wrangler is currently only supported in [Visual Studio Code Insiders](https://code.visualstudio.com/insiders/)**. Please install the extension through the Marketplace tab in VS Code Insiders.
+> :warning: **Data Wrangler is currently only supported in [Visual Studio Code Insiders](https://code.visualstudio.com/insiders/)**. Please install the extension by searching for "Data Wrangler" in the VS Code Extensions Marketplace tab of VS Code Insiders.
 
 [Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) is a code-centric data cleaning tool that is integrated into VS Code Insiders and VS Code Jupyter Notebooks. Data Wrangler aims to increase the productivity of data scientists doing data cleaning by providing a rich user interface that automatically generates Pandas code for and shows insightful column statistics and visualizations.
 
