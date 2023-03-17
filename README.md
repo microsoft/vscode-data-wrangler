@@ -154,7 +154,6 @@ These are the Data Wrangler operations that are currently supported in the initi
 | DateTime formatting by example | Automatically perform DateTime formatting when a pattern is detected from the examples you provide    |
 | New column by example          | Automatically create a column when a pattern is detected from the examples you provide.               |
 | Scale min/max values           | Scale a numerical column between a minimum and maximum value                                          |
-| Describe your operation        | Generate code using natural language                                                                  |
 | Custom operation               | Automatically create a new column based on examples and the derivation of existing column(s)          |
 
 ## Troubleshooting
