@@ -19,8 +19,8 @@ This document will cover how to:
 
 1. If you have not already done so, install [Python](https://www.python.org/downloads/).  
    **IMPORTANT:** Data Wrangler only supports Python version 3.7 or higher.
-2. Install [Visual Studio Code Insiders](https://code.visualstudio.com/insiders/)).
-3. Install the [Data Wrangler extension for VS Code Insiders] (https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) from the Visual Studio Code Insiders Marketplace. For additional details on installing extensions, see Extension Marketplace. The Data Wrangler extension is named Data Wrangler and it’s published by Microsoft.
+2. Install [Visual Studio Code Insiders](https://code.visualstudio.com/insiders/).
+3. Install the [Data Wrangler extension for VS Code Insiders](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) from the Visual Studio Code Insiders Marketplace. For additional details on installing extensions, see Extension Marketplace. The Data Wrangler extension is named Data Wrangler and it’s published by Microsoft.
 
 When you launch Data Wrangler for the first time, it will ask you which Python kernel you would like to connect to. It will also check your machine and environment to see if any required Python packages are installed (e.g., Pandas).
 
