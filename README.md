@@ -88,7 +88,7 @@ The **Summary Panel** shows detailed summary statistics for your dataset or a sp
 
 The **Operation History Panel** shows a human readable list of all the operations that have been previously applied in the current Data Wrangling session. It enables the user to undo specific operations or edit the most recent operation. Selecting a step will highlight the changes in the data grid and will show the generated code associated with that operation.
 
-The **Code Preview** section will show the Python and Pandas code that Data Wrangler has generated when an operation. It will remain blank when no operation is selected. The code can even be edited by the user, and the data grid will highlight the effect on the data.
+The **Code Preview** section will show the Python and Pandas code that Data Wrangler has generated when an operation is selected. It will remain blank when no operation is selected. The code can even be edited by the user, and the data grid will highlight the effect on the data.
 
 ### Example: Filtering a column
 
