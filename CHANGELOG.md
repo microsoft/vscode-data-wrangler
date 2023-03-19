@@ -4,6 +4,8 @@ _**Note**: the minor version (middle number) of all stable versions will be even
 
 ## Version 0.3.0
 
+## Version 0.2.1
+
 **Bugfixes**:
 
 * Fixed an issue where the grid would sometimes experience problems after performing an operation that involved editing it.
