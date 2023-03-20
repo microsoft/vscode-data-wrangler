@@ -160,7 +160,9 @@ These are the Data Wrangler operations that are currently supported in the initi
 
 ### General kernel connectivity issues
 
-For general connectivity issues, please see the "Connecting to a Python kernel" section above on alternative methods to connect. To clear an already cached kernel, you can run the `Data Wrangler: Clear cached runtime` command from the command palette (Ctrl/Cmd+Shift+P).
+For general connectivity issues, please see the "Connecting to a Python kernel" section above on alternative methods to connect. To debug issues related to the local Python interpreter option, one way to potentially fix the issue would be to try installing different versions of the Jupyter and Python extensions. For example, if stable versions of the extensions are installed then one could try installing the pre-release (and vice versa). If the issue is new, then consider reverting to a previous version.
+
+To clear an already cached kernel, you can run the `Data Wrangler: Clear cached runtime` command from the command palette (Ctrl/Cmd+Shift+P).
 
 ### UnicodeDecodeError
 
