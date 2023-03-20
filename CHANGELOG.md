@@ -4,7 +4,7 @@ _**Note**: the minor version (middle number) of all stable versions will be even
 
 ## Version 0.3.0 (pre-release)
 
-## Version 0.2.1
+## Version 0.2.1 (stable release)
 
 **Bugfixes**:
 
