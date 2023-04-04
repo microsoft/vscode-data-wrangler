@@ -2,6 +2,8 @@
 
 _**Note**: the minor version (middle number) of all stable versions will be even while pre-releases will be odd. For more information on why this is needed, see the extension publishing documentation [here](<https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions>)._
 
+## Version 0.4.0 (stable release)
+
 ## Version 0.3.2 (pre-release)
 * General bug fixes and improvements
 
