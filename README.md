@@ -1,8 +1,6 @@
-# Data Wrangler Extension for Visual Studio Code Insiders
+# Data Wrangler Extension for Visual Studio Code
 
-> :warning: **Data Wrangler is currently only supported in [Visual Studio Code Insiders](https://code.visualstudio.com/insiders/)**. Please install the extension by searching for "Data Wrangler" in the VS Code Extensions Marketplace tab of VS Code Insiders.
-
-[Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) is a code-centric data cleaning tool that is integrated into VS Code Insiders and VS Code Jupyter Notebooks. Data Wrangler aims to increase the productivity of data scientists doing data cleaning by providing a rich user interface that automatically generates Pandas code for and shows insightful column statistics and visualizations.
+[Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) is a code-centric data cleaning tool that is integrated into VS Code and VS Code Jupyter Notebooks. Data Wrangler aims to increase the productivity of data scientists doing data cleaning by providing a rich user interface that automatically generates Pandas code for and shows insightful column statistics and visualizations.
 
 [<img src="https://user-images.githubusercontent.com/8560030/225425356-c0abf8e2-332f-439c-8de1-9a5946b933ee.png" />](https://youtu.be/KrzcV1c1W1U)
 
@@ -19,8 +17,8 @@ This document will cover how to:
 
 1. If you have not already done so, install [Python](https://www.python.org/downloads/).  
    **IMPORTANT:** Data Wrangler only supports Python version 3.7 or higher.
-2. Install [Visual Studio Code Insiders](https://code.visualstudio.com/insiders/).
-3. Install the [Data Wrangler extension for VS Code Insiders](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) from the Visual Studio Code Insiders Marketplace. For additional details on installing extensions, see Extension Marketplace. The Data Wrangler extension is named Data Wrangler and it’s published by Microsoft.
+2. Install [Visual Studio Code](https://code.visualstudio.com/download).
+3. Install the [Data Wrangler extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) from the Visual Studio Marketplace. For additional details on installing extensions, see Extension Marketplace. The Data Wrangler extension is named Data Wrangler and it’s published by Microsoft.
 
 When you launch Data Wrangler for the first time, it will ask you which Python kernel you would like to connect to. It will also check your machine and environment to see if any required Python packages are installed (e.g., Pandas).
 
@@ -58,17 +56,17 @@ To set up a Jupyter notebook server and use it with this option, follow the step
 
 ## Launching Data Wrangler
 
-Once Data Wrangler has been successfully installed, there are 2 ways to launch it in VS Code Insiders.
+Once Data Wrangler has been successfully installed, there are 2 ways to launch it in VS Code.
 
 ### Launching Data Wrangler from a Jupyter Notebook
 
-If you are in a Jupyter Notebook working with Pandas data frames, you’ll now see a “Launch Data Wrangler” button appear after running specific operations on your data frame, such as df.head(). Clicking the button will open a new tab in VS Code Insiders with the Data Wrangler interface in a sandboxed environment.
+If you are in a Jupyter Notebook working with Pandas data frames, you’ll now see a “Launch Data Wrangler” button appear after running specific operations on your data frame, such as df.head(). Clicking the button will open a new tab in VS Code with the Data Wrangler interface in a sandboxed environment.
 
 ![image](https://user-images.githubusercontent.com/2180824/218180019-d2c434dd-2a27-4355-a00a-f8ec09a1f828.png)
 
 ### Launching Data Wrangler directly from a CSV file
 
-You can also launch Data Wrangler directly from a local CSV file. To do so, open any folder in VS Code Insiders that has the CSV dataset you’d like to explore. In the File Explorer panel, right click the .CSV dataset and click “Open in Data Wrangler”.
+You can also launch Data Wrangler directly from a local CSV file. To do so, open any folder in VS Code that has the CSV dataset you’d like to explore. In the File Explorer panel, right click the .CSV dataset and click “Open in Data Wrangler”.
 
 ![image](https://user-images.githubusercontent.com/2180824/218180054-386cf32a-8876-48dd-8065-134d0bd932f0.png)
 
