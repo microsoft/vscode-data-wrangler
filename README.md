@@ -16,7 +16,7 @@ This document will cover how to:
 ## Setting up your environment
 
 1. If you have not already done so, install [Python](https://www.python.org/downloads/).  
-   **IMPORTANT:** Data Wrangler only supports Python version 3.7 or higher.
+   **IMPORTANT:** Data Wrangler only supports Python version 3.8 or higher.
 2. Install [Visual Studio Code](https://code.visualstudio.com/download).
 3. Install the [Data Wrangler extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) from the Visual Studio Marketplace. For additional details on installing extensions, see Extension Marketplace. The Data Wrangler extension is named Data Wrangler and it’s published by Microsoft.
 
@@ -26,7 +26,7 @@ When you launch Data Wrangler for the first time, it will ask you which Python k
 >
 > | Name    | Minimum required version | Automatically installed |
 > | ------- | ------------------------ | ----------------------- |
-> | Python  | 3.7                      | No                      |
+> | Python  | 3.8                      | No                      |
 > | pandas  | 0.25.0                   | Yes                     |
 > | regex\* | 2020.11.13               | Yes                     |
 >
