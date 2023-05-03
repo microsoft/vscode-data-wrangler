@@ -4,7 +4,7 @@
 **Updates**:
 * In "Find and replace" operation, surface a form field error if the "Old value" field is left empty.
 * Improve readability of code example in code editor placeholder text by showing df = df.drop(columns=['ColumnName']) instead of df = drop('ColumnName', axis=1)
-* Removed the `inplace=True` and `copy=False` parameters from generated pandas code, as those aren't considered best practice and are being considered for deprecation in Pandas.
+* Removed the `inplace=True` and `copy=False` parameters from generated pandas code, as those aren't considered best practice and [are being considered for deprecation](https://github.com/pandas-dev/pandas/pull/51466) in Pandas.
 * Improved support for all VS Code themes.
 
 **Bugfixes**:
