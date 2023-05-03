@@ -8,11 +8,11 @@
 * Improved support for all VS Code themes.
 
 **Bugfixes**:
-*	In "Find and replace" operation, preserve the contents of fields "Old value" and "New value" when "Target columns" is changed.
+* In "Find and replace" operation, preserve the contents of fields "Old value" and "New value" when "Target columns" is changed.
 * Fixed an issue where timestamps ignored time zone information when displayed in the grid.
-*	Fixed an issue for the context menu to disable the context menu operations when required.
-*	Fixed issue where the operation panel collapses when clicking on the grid.
-*	Fixed an issue where errors may not be caught in some cases when using IPython version 8.12.1 or above.
+* Fixed an issue for the context menu to disable the context menu operations when required.
+* Fixed issue where the operation panel collapses when clicking on the grid.
+* Fixed an issue where errors may not be caught in some cases when using IPython version 8.12.1 or above.
 
 ## Version 0.6.0
 **Updates**:
