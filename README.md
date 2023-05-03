@@ -27,7 +27,7 @@ When you launch Data Wrangler for the first time, it will ask you which Python k
 > | Name    | Minimum required version | Automatically installed |
 > | ------- | ------------------------ | ----------------------- |
 > | Python  | 3.8                      | No                      |
-> | pandas  | 0.25.0                   | Yes                     |
+> | pandas  | 0.25.2                   | Yes                     |
 > | regex\* | 2020.11.13               | Yes                     |
 >
 > _\* We use the open-source `regex` package to be able to use Unicode properties (for example, `/\p{Lowercase_Letter}/`), which aren't supported by Python's built-in regex module (`re`). Unicode properties make it easier and cleaner to support foreign characters in regular expressions._
