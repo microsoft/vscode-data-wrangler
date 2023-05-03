@@ -1,5 +1,19 @@
 # Changelog
 
+## Version 0.8.0
+**Updates**:
+* In "Find and replace" operation, surface a form field error if the "Old value" field is left empty.
+* Improve readability of code example in code editor placeholder text by showing `df = df.drop(columns=['ColumnName'])` instead of `df = drop('ColumnName', axis=1)`.
+* Removed the `inplace=True` and `copy=False` parameters from generated pandas code, as those aren't considered best practice and [are being considered for deprecation](https://github.com/pandas-dev/pandas/pull/51466) in Pandas.
+* Improved support for all VS Code themes.
+
+**Bugfixes**:
+* In "Find and replace" operation, preserve the contents of fields "Old value" and "New value" when "Target columns" is changed.
+* Fixed an issue where timestamps ignored time zone information when displayed in the grid.
+* Fixed an issue for the context menu to disable the context menu operations when required.
+* Fixed issue where the operation panel collapses when clicking on the grid.
+* Fixed an issue where errors may not be caught in some cases when using IPython version 8.12.1 or above.
+
 ## Version 0.6.0
 **Updates**:
 * Jupyter extension installer now installs the stable version instead of pre-release to improve stability for the first install experience.
