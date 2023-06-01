@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 0.10.0
+**Updates**
+* Exports to CSV can now be cancelled before completing, via the VS Code toast notification.
+ 
+**Bugfixes**
+* Fixed an issue where errors may not be caught in some cases when using IPython version 8.12.1 or above.
+
 ## Version 0.8.0
 **Updates**:
 * In "Find and replace" operation, surface a form field error if the "Old value" field is left empty.
