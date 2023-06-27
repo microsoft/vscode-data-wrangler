@@ -1,5 +1,15 @@
 # Changelog
 
+## Version 0.12.0
+**Updates**
+* Added the ability to copy one or more selected data rows via the grid cell context menu.
+* Added command "Reveal Source File in Explorer View" which reveals the original source dataset file in the file explorer pane.
+* The operation list expansion state now persists across operations, and is unique to each Data Wrangler tab.
+* Enabled additional code editor features in the code preview panel, such as copy/pasting via the context menu, and dragging-and-dropping text content into the editor.
+* Column insights are now rendered using a library with much better accessibility support, including keyboard navigation, screen reader feedback, and more.
+* Added options "Match full string", "Match case", and "Use regular expression" to operation "Find and replace".
+* Added new numerical operations "Round", "Round down (floor)", and "Round up (ceiling)".
+
 ## Version 0.10.0
 **Updates**
 * Exports to CSV can now be cancelled before completing, via the VS Code toast notification.
