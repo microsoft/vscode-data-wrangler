@@ -2,8 +2,6 @@
 
 ## Version 0.14.0
 **Updates**
-* Improved keyboard accessibility by enabling keyboard focus on elements in the Cleaning Steps panel.
-*	Improved keyboard accessibility in the Grid view by reducing the number of tab stops. Once focused, the grid can be navigated using the arrow keys, page up / down, home, etc.
 * Added support for exporting data in the Parquet format. The users can enable this option in the settings, and the feature will be enabled by default on a future version.
 * Improvements to column visualizations including adjustments to accessibility labels and improved formatting of tooltip contents.
 
