@@ -1,5 +1,16 @@
 # Changelog
 
+## Version 0.14.0
+**Updates**
+* Improved keyboard accessibility by enabling keyboard focus on elements in the Cleaning Steps panel.
+*	Improved keyboard accessibility in the Grid view by reducing the number of tab stops. Once focused, the grid can be navigated using the arrow keys, page up / down, home, etc.
+* Added support for exporting data in the Parquet format. The users can enable this option in the settings, and the feature will be enabled by default on a future version.
+* Improvements to column visualizations including adjustments to accessibility labels and improved formatting of tooltip contents.
+
+**Bugfixes**
+* Fixed an issue where Data Wrangler was expanding all VS Code panels (bottom panel and sidebars) even when the Data Wrangler tab was being unfocused.
+* Fixed an issue where the wrong column would sometimes be selected for operations when columns are dynamically disabled (e.g., Fill NA).
+
 ## Version 0.12.0
 **Updates**
 * Added the ability to copy one or more selected data rows via the grid cell context menu.
