@@ -68,7 +68,7 @@ We currently only accept the following formats for launching:
 - `df.head()`
 - `df.tail()`
 
-Where `df` is the name of the data frame variable. The code above should appear at the end of a cell and without any comments after it.
+Where `df` is the name of the data frame variable. The code above should appear at the end of a cell and without any comments or other code after it.
 
 ![image](https://user-images.githubusercontent.com/2180824/218180019-d2c434dd-2a27-4355-a00a-f8ec09a1f828.png)
 
