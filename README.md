@@ -62,6 +62,14 @@ Once Data Wrangler has been successfully installed, there are 2 ways to launch i
 
 If you are in a Jupyter Notebook working with Pandas data frames, you’ll now see a “Launch Data Wrangler” button appear after running specific operations on your data frame, such as df.head(). Clicking the button will open a new tab in VS Code with the Data Wrangler interface in a sandboxed environment.
 
+**Important note**:
+We currently only accept the following formats for launching:
+- `df`
+- `df.head()`
+- `df.tail()`
+
+Where `df` is the name of the data frame variable. The code above should appear at the end of a cell and without any comments after it.
+
 ![image](https://user-images.githubusercontent.com/2180824/218180019-d2c434dd-2a27-4355-a00a-f8ec09a1f828.png)
 
 ### Launching Data Wrangler directly from a CSV file
