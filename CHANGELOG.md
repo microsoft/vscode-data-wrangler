@@ -1,5 +1,17 @@
 # Changelog
 
+## Version 0.16.0
+**Deprecation notice**
+* The `mad` (Mean Absolute Deviation) aggregation type has been removed from the Group By and Aggregate operation as it is no longer available in pandas.
+
+**Updates**
+* Improved support for detecting conditional formulas in the "by example" operations.
+* Improved keyboard accessibility by enabling keyboard focus on elements in the Cleaning Steps panel.
+* Improved keyboard accessibility in the Grid view by reducing the number of tab stops. Once focused, the grid can be navigated using the arrow keys, page up / down, home, etc.
+
+**Bugfixes**
+* Fixed issue where data frames with duplicate index keys could not be properly viewed or wrangled. Please note for this scenario that there are some limitations with generating the diff previews, these are outlined [here](https://github.com/microsoft/vscode-data-wrangler/wiki/Known-Issues#pandas-dataframes-with-duplicate-index-keys).
+
 ## Version 0.14.0
 **Updates**
 * Added support for exporting data in the Parquet format. The users can enable this option in the settings, and the feature will be enabled by default on a future version.
