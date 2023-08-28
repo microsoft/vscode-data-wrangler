@@ -2,7 +2,7 @@
 
 ## Version 0.16.0
 **Deprecation notice**
-* The mad aggregation type has been removed from the Group By and Aggregate operation as it is no longer available in Pandas.
+* The `mad` (Mean Absolute Deviation) aggregation type has been removed from the Group By and Aggregate operation as it is no longer available in pandas.
 
 **Updates**
 * Improved support for detecting conditional formulas in the "by example" operations.
