@@ -1,5 +1,18 @@
 # Changelog
 
+## Version 0.18.0
+**Updates**
+* Added new "Go to column" button to reveal and smoothly scroll to a target column in the grid.
+* Issue report button now also includes relevant Python package information in the report.
+* Launching Data Wrangler from a Jupyter notebook now opens multiple tabs when the same variable name is launched.
+* To maximize screen real estate, users can now show or hide the column statistics that appear on the column headers.
+* When using a Filter operation, users can now invert the filter conditions by choosing between “Keep matching rows” and “Delete matching rows”.
+* Enabled keyboard-accessible tooltips on cleaning steps for improved accessibility.
+
+**Bugfixes**
+* Double clicking on a column now correctly expands to the full width of the column.
+* Fixed issue where the launch button would sometimes not appear after running a cell.
+
 ## Version 0.16.0
 **Deprecation notice**
 * The `mad` (Mean Absolute Deviation) aggregation type has been removed from the Group By and Aggregate operation as it is no longer available in pandas.
