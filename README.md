@@ -24,13 +24,10 @@ When you launch Data Wrangler for the first time, it will ask you which Python k
 
 > Here is a list of the required versions for Python and Python packages, along with whether they are automatically installed by Data Wrangler:
 >
-> | Name    | Minimum required version | Automatically installed |
-> | ------- | ------------------------ | ----------------------- |
-> | Python  | 3.8                      | No                      |
-> | pandas  | 0.25.2                   | Yes                     |
-> | regex\* | 2020.11.13               | Yes                     |
->
-> _\* We use the open-source `regex` package to be able to use Unicode properties (for example, `/\p{Lowercase_Letter}/`), which aren't supported by Python's built-in regex module (`re`). Unicode properties make it easier and cleaner to support foreign characters in regular expressions._
+> | Name   | Minimum required version | Automatically installed |
+> | ------ | ------------------------ | ----------------------- |
+> | Python | 3.8                      | No                      |
+> | pandas | 0.25.2                   | Yes                     |
 
 If they are not found on your environment, Data Wrangler will attempt to install them for you via pip. If Data Wrangler is unable to install dependencies, the easiest workaround is to manually run pip install, and then launch Data Wrangler again. These dependencies are required for Data Wrangler such that it can generate Python and Pandas code.
 
@@ -64,9 +61,10 @@ If you are in a Jupyter Notebook working with Pandas data frames, you’ll now s
 
 **Important note**:
 We currently only accept the following formats for launching:
-- `df`
-- `df.head()`
-- `df.tail()`
+
+-   `df`
+-   `df.head()`
+-   `df.tail()`
 
 Where `df` is the name of the data frame variable. The code above should appear at the end of a cell and without any comments or other code after it.
 
@@ -84,7 +82,7 @@ You can also launch Data Wrangler directly from a local CSV file. To do so, open
 
 The Data Wrangler interface is divided into 6 components, described below.
 
-The **Quick Insights** header is where you can quickly see valuable information about each column. Depending on the datatype of the column, Quick Insights will show the distribution of the data or the frequency of datapoints, as well as missing and unique values.
+The **Quick Insights** header is where you can quickly see valuable information about each column. Depending on the datatype of the column, Quick Insights will show the distribution of the data or the frequency of datapoints, as well as missing and distinct values.
 
 The **Data Grid** gives you a scrollable pane where you can view your entire dataset. Additionally, when selecting an operation to perform, a preview will be illustrated in the data grid, highlighting the modified columns.
 
@@ -153,7 +151,7 @@ These are the Data Wrangler operations that are currently supported in the initi
 | Group by column and aggregate  | Group by columns and aggregate results                                                                |
 | Strip whitespace               | Remove whitespace from the beginning and end of text                                                  |
 | Split text                     | Split a column into several columns based on a user defined delimiter                                 |
-| Convert text to capital case   | Capitalize the first character of a string with the option to apply to all words                      |
+| Capitalize first character     | Converts first character to uppercase and remaining to lowercase                                      |
 | Convert text to lowercase      | Convert text to lowercase                                                                             |
 | Convert text to uppercase      | Convert text to UPPERCASE                                                                             |
 | String transform by example    | Automatically perform string transformations when a pattern is detected from the examples you provide |
