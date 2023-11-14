@@ -1,5 +1,32 @@
 # Changelog
 
+## Version 0.20.0
+**Updates**
+* Missing values are now displayed with a different style in the grid.
+* Percentages in column statistics now show "<1%" instead of "0%" when the ratio is below 1% but non-zero. Similar behavior applies to ratios between 99% and 100%.
+* It is now possible to export code and data without having to first perform operations. This will allow users additional flexibility with generating import code and with exporting into different file formats. Note: when entering Data Wrangler from a notebook, it will still be required to do operations before exporting the code.
+* When an operation fails due to a missing package (such as when importing in a custom operation), Data Wrangler will now display a button to quickly install the missing package based on the imported name.
+* Removed the requirement to install `regex` package when loading Data Wrangler.
+
+**Accessibility improvements**
+* Ensure that all content within the operations and code preview panels remains accessible even at high zoom level.
+* Added the ability to select operations using a keyboard.
+* Operation preview status is now announced when using a screen reader.
+* Added or fixed ARIA labels, roles, and attributes in several places, including:
+  * Tree views in the operations and summary panels
+  * Operation argument fields
+  * Column type and status icons
+  * Icon-only buttons in the grid and operations panel
+
+**Bugfixes**
+* Fixed an issue where the most frequent value was not shown in the summary panel for DateTime or Boolean columns.
+* Fixed an issue in numeric histograms where values lying very close to bucket boundaries could sometimes be placed in the wrong bucket.
+* Fixed an issue where the code preview panel would not have a title if moved to a different location in the VS Code UI.
+* Fixed issue where overriding definitions from the builtins namespace could cause runtime errors.
+* Fixed issue where toolbar overflow behaviour was broken. Menu items now move into an overflow menu when there is not enough space.
+* Fixed an issue where the placeholder text in the code preview panel could overflow with no available scrollbar.
+* Resize the icon for the "Open in Data Wrangler" button, as it was getting cut off in recent versions of VS Code.
+
 ## Version 0.18.0
 **Updates**
 * Added new "Go to column" button to reveal and smoothly scroll to a target column in the grid.
