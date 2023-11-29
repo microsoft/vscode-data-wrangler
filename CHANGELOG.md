@@ -1,5 +1,19 @@
 # Changelog
 
+## Version 0.22.0
+**Updates**
+* Updates to the Filter, Sort, and Group By and Aggregate operations
+  * UX made more compact with fewer dropdowns
+  * Groups can now be reordered using drag handle or menu
+  * Missing parameters will no longer break the preview
+  * It is now possible to perform a group by without aggregations
+* Miscellaneous styling updates to make operations more compact
+
+
+**Bugfixes**
+* Fixed an issue where, in certain scenarios, some loading failures would occur without generating an error message. This fix will facilitate the identification of issues during the startup process.
+* For Python packages where the imported name differs from the package name (e.g., import sklearn vs. package name scikit-learn), Data Wrangler now uses the correct package name when suggesting installation. It does this by keeping an internal mapping of import name to package name for the most commonly used Python packages.
+
 ## Version 0.20.0
 **Updates**
 * Missing values are now displayed with a different style in the grid.
