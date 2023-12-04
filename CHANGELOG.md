@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.22.1
+**Bugfixes**
+* Fixed an issue where column visualizations could sometimes fail to update when the data changes
+
 ## Version 0.22.0
 **Updates**
 * Updates to the Filter, Sort, and Group By and Aggregate operations
@@ -8,7 +12,6 @@
   * Missing parameters will no longer break the preview
   * It is now possible to perform a group by without aggregations
 * Miscellaneous styling updates to make operations more compact
-
 
 **Bugfixes**
 * Fixed an issue where, in certain scenarios, some loading failures would occur without generating an error message. This fix will facilitate the identification of issues during the startup process.
