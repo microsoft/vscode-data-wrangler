@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.22.2
+**Bugfixes**
+* Fixed an issue where "Sort Descending" was setting the sort order to ascending when invoked from the context menu.
+
 ## Version 0.22.1
 **Bugfixes**
 * Fixed an issue where column visualizations could sometimes fail to update when the data changes
