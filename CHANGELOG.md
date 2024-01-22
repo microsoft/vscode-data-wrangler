@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.22.3
+**Updates**
+* Support for Pandas 2.2.0
+
 ## Version 0.22.2
 **Bugfixes**
 * Fixed an issue where "Sort Descending" was setting the sort order to ascending when invoked from the context menu.
