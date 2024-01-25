@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.24.0
+## Version 0.24.0
 ### Updates
 #### Files
 -   Added support for opening Data Wrangler from XLSX, XLS, and TSV files.
