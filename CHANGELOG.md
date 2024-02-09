@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.24.1
+### Updates
+-   Added support for Jupyter extension versions `v2024.2.2024020201` and higher.
+
 ## Version 0.24.0
 ### Updates
 #### Files
