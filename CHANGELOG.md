@@ -23,7 +23,6 @@
 - Fixed an issue where the Pandas installation prompt was not appearing when launching from a notebook.
 - Minor theming fixes.
 - No longer shows the "Open source  file in basic editor" button for sessions entered from the notebook as it was always disabled.
-- Fixed flicker in editor commands when switching between Viewing and Editing mode.
 - Fixed issue where operations found in the search bar required a double click to select.
 
 
