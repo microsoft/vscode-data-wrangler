@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 0.26.0
+### Updates
+-   Launching the data viewer in Jupyter notebooks with the latest pre-release version in VS Code Insiders now opens Data Wrangler in viewing mode. The new data viewing mode provides a lightweight and faster experience for quickly viewing, sorting and filtering data. This mode is now the default entrypoint from the notebook, which can be disabled from setting to default back to the original editing mode. To manually enter this mode, select “Viewing” in the mode toggle in the toolbar.
+-   The data import step can now be edited like any other step when data has been loaded from a file. Some basic arguments have been added including file path, delimiter, and page # for Excel files.
+-   Added a confirmation dialog when clicking "Back to all operations" for custom operations to warn potential loss of code.
+
+### Bugfixes
+-   Fixed an issue where the Pandas installation prompt was not appearing when launching from a notebook.
+
 ## Version 0.24.1
 ### Updates
 -   Added support for Jupyter extension versions `v2024.2.2024020201` and higher.
