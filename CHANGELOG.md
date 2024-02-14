@@ -5,9 +5,27 @@
 -   Launching the data viewer in Jupyter notebooks with the latest pre-release version in VS Code Insiders now opens Data Wrangler in viewing mode. The new data viewing mode provides a lightweight and faster experience for quickly viewing, sorting and filtering data. This mode is now the default entrypoint from the notebook, which can be disabled from setting to default back to the original editing mode. To manually enter this mode, select “Viewing” in the mode toggle in the toolbar.
 -   The data import step can now be edited like any other step when data has been loaded from a file. Some basic arguments have been added including file path, delimiter, and page # for Excel files.
 -   Added a confirmation dialog when clicking "Back to all operations" for custom operations to warn potential loss of code.
+-   Improvements to list and dict variable loading support.
+-   Clicking on the data shape now also reveals the summary panel.
+
+### Accessibility Improvements
+-   Improved keyboard accessibility for several links and buttons across the UI.
+-   Improved screen reader announcements after loading data, accepting/rejecting/undoing operations, and more.
+-   Improved contrast of various UI elements in some themes.
+-   Added or fixed ARIA labels, roles, and attributes in several places, including:
+    - Tree view in the summary panel
+    - Sortable lists in sort, filter, and group by operation arguments
+		  - Argument fields in sort and filter operations
+		  - Sort and filter buttons in the grid cells and toolbar
+		  - And more...
 
 ### Bugfixes
 -   Fixed an issue where the Pandas installation prompt was not appearing when launching from a notebook.
+-   Minor theming fixes.
+-   No longer shows the "Open source  file in basic editor" button for sessions entered from the notebook as it was always disabled.
+-   Fixed flicker in editor commands when switching between Viewing and Editing mode.
+-   Fixed issue where operations found in the search bar required a double click to select.
+
 
 ## Version 0.24.1
 ### Updates
