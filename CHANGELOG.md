@@ -12,7 +12,6 @@
 - Improved keyboard navigation order for some controls.
  
 ### Bugfixes
-- Fixed an issue where column statistics could fail to update when applying filters in Viewing mode.
 - Fixed an issue where filter was being re-executed when switching from Editing to Viewing mode with the filters panel open.
 
 ## Version 0.26.0
