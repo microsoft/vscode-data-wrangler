@@ -1,5 +1,19 @@
 # Changelog
 
+## Version 0.28.0
+### Updates
+- Progress messages while previewing, undoing, discarding and committing operations now only appear after a short delay. This reduces flickering of notifications when several actions happen in a short time span.
+- Added a delayed progress message for the View data toolbar menu item when the kernel is busy to make it clear that there is a pending background task.
+ 
+### Accessibility improvements
+- Improved color contrast of various UI controls in some VS Code themes.
+- Improved visibility of keyboard focus outlines across the UI.
+- The code preview panel will now display the text cursor even when the code is not editable. This enables users to select code more easily using only the keyboard.
+- Improved keyboard navigation order for some controls.
+ 
+### Bugfixes
+- Fixed an issue where filter was being re-executed when switching from Editing to Viewing mode with the filters panel open.
+
 ## Version 0.26.0
 ### Updates
 - Introducing a data viewing mode for Data Wrangler, which integrates into the Jupyter Notebooks data viewer. The new data viewing mode provides a lightweight and faster experience for quickly viewing, sorting and filtering data. This mode is now the default Data Wrangler entrypoint from the notebook, which can be disabled from setting to default back to the original editing mode. To manually enter this mode, select “Viewing” in the mode toggle in the toolbar.
