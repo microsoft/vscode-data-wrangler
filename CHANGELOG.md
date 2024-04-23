@@ -1,5 +1,47 @@
 # Changelog
 
+## Version 1.0.0
+### Updates
+- **Web support added! 🎉** Data Wrangler is now supported in the browser for notebook entry points. You can try installing the extension in vscode.dev.
+- Added support for viewing data from a notebook while in debugging mode.
+- Data Wrangler has a vibrant new icon!
+- Data Wrangler is now available in 14 display languages supported by Visual Studio Code.
+- The “preview” label in the extension name and marketplace entry have been removed.
+- Changed .NET to be an optional dependency. When attempting to use "by example" operations for the first time, a prompt will be shown to ask users if they want to install .NET. This should lead to a smoother experience for users who are unable to install .NET in certain environments.
+- Added the functionality to delete the most recently committed history step, even when a preview is active on it, which can save time by not requiring discarding the step before deletion.
+- One-hot encode now generates code to create columns next to the targets instead of at the end. This makes it easier to verify by not having to scroll to the end of the grid to see the new results.
+- Updated the cell status bar entrypoint label to: "Open <variable> in Data Wrangler". This makes it easier for new users to discover.
+- Statistics are now displayed with greater precision in the summary panel.
+- Added a documentation link in input box for setting up JupyterLab kernels. This will help users who are unfamiliar with Jupyter to set up their environment.
+- Several experimental features have been upgraded to a stable state and their associated flags in VS Code settings have been removed. These had previously been enabled by default and so should result in no change for most users.
+- Error stack traces are now displayed using a VS Code terminal instead of a text editor. This improves color contrast and enables line highlights to be displayed in some cases.
+- Added support for Jupyter extension version 2024.3.2024030101 and above.
+- Updated the “Auto Detect Csv Delimiter” experimental setting to be disabled by default.
+ 
+### Accessibility improvements
+- Automatically move keyboard focus to the operations panel when an operation is triggered using the grid context menu.
+- Improved ARIA role for the "truncate the data" button when loading large files.
+- Enable resizing columns in the grid via keyboard by pressing Ctrl + Alt + Left/Right.
+- Ensure that focus outlines are visible on disabled toolbar items.
+- Improved titles in extension webviews for a clearer experience when using a screen reader.
+- Use the application role within webviews for improved accessibility when using a screen reader.
+ 
+### Bugfixes
+- Fixed a typo in the settings description for "Start in edit mode for notebook entrypoints" that referred to viewing mode instead of editing.
+- Fixed an issue where the Data Viewer would launch in viewing mode even if set to open in editing mode by default.
+- Fixed an issue where the "View data" notebook toolbar item was accessible when a non-notebook editor window was focused, but would be unable to load Data Wrangler.
+- Fixed an issue where the "View data" notebook toolbar item would disappear when focusing dialog windows.
+- Fixed an issue where data loading with nested numpy arrays would crash on load.
+- Fixed an issue where an error notification could appear after closing Data Wrangler before it has finished connecting to the runtime.
+- Fixed an issue where very large numeric values could lose precision when displayed in the grid or statistics.
+- Fixed an issue where the sort and filter commands were available in the command palette even when they should be disabled.
+- Fixed an issue where the variable name displayed in the "custom operation" help text could sometimes be incorrect.
+- Fixed an issue where one-hot encoding more than one column would not delete all of the original columns.
+- Fixed an issue where PyTorch Tensor objects would fail to open in Data Wrangler when opened from a notebook.
+- Fixed an issue where notebooks created via export would be unable to open the data viewer without reloading.
+- Fixed an issue where the Data Wrangler extension was not being activated for interactive notebooks.
+
+
 ## Version 0.28.0
 ### Updates
 - Progress messages while previewing, undoing, discarding and committing operations now only appear after a short delay. This reduces flickering of notifications when several actions happen in a short time span.
