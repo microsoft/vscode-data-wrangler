@@ -1,181 +1,95 @@
 # Data Wrangler Extension for Visual Studio Code
 
-[Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) is a code-centric data cleaning tool that is integrated into VS Code and VS Code Jupyter Notebooks. Data Wrangler aims to increase the productivity of data scientists doing data cleaning by providing a rich user interface that automatically generates Pandas code for and shows insightful column statistics and visualizations.
+[Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) is a code-centric data viewing and cleaning tool that is integrated into VS Code and VS Code Jupyter Notebooks. It provides a rich user interface to view and analyze your data, show insightful column statistics and visualizations, and automatically generate Pandas code as you clean and transform the data.
 
-[<img src="https://user-images.githubusercontent.com/8560030/225425356-c0abf8e2-332f-439c-8de1-9a5946b933ee.png" />](https://youtu.be/KrzcV1c1W1U)
+The following is an example of opening Data Wrangler from the notebook to analyze and clean the data with the built-in operations. Then the automatically generated code is exported back into the notebook.
 
-This document will cover how to:
+![a gif of opening Data Wrangler from a notebook, looking through the data, switching from Viewing to Editing mode, applying data transformations, and exporting the generated Python code back into the notebook](https://github.com/microsoft/vscode-docs/assets/15910920/1a6d8fd1-6454-4289-b8c4-fe84050ae981)
 
--   Install and setup Data Wrangler
--   Launch Data Wrangler from a notebook
--   Use Data Wrangler to explore your data
--   Perform operations on your data
--   Edit and export code for data wrangling to a notebook
--   Troubleshooting and providing feedback
+The goal of this page is to help you quickly get up and running with Data Wrangler.
 
-## Setting up your environment
+## Set up your environment
 
-1. If you have not already done so, install [Python](https://www.python.org/downloads/).  
-   **IMPORTANT:** Data Wrangler only supports Python version 3.8 or higher.
-2. Install [Visual Studio Code](https://code.visualstudio.com/download).
-3. Install the [Data Wrangler extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) from the Visual Studio Marketplace. For additional details on installing extensions, see Extension Marketplace. The Data Wrangler extension is named Data Wrangler and it’s published by Microsoft.
+1. If you have not already done so, install [Python](https://www.python.org/downloads/)
+   (**Note:** Data Wrangler only supports Python version 3.8 or higher).
+2. <a class="install-extension-btn" href="vscode:extension/ms-toolsai.datawrangler">Install the Data Wrangler extension</a>
 
-When you launch Data Wrangler for the first time, it will ask you which Python kernel you would like to connect to. It will also check your machine and environment to see if any required Python packages are installed (e.g., Pandas).
+When you launch Data Wrangler for the first time, it asks you which Python kernel you would like to connect to. It also checks your machine and environment to see if the required Python packages are installed, such as Pandas.
 
-> Here is a list of the required versions for Python and Python packages, along with whether they are automatically installed by Data Wrangler:
->
-> | Name   | Minimum required version | Automatically installed |
-> | ------ | ------------------------ | ----------------------- |
-> | Python | 3.8                      | No                      |
-> | pandas | 0.25.2                   | Yes                     |
+## Open Data Wrangler
 
-If they are not found on your environment, Data Wrangler will attempt to install them for you via pip. If Data Wrangler is unable to install dependencies, the easiest workaround is to manually run pip install, and then launch Data Wrangler again. These dependencies are required for Data Wrangler such that it can generate Python and Pandas code.
+Anytime you are in Data Wrangler, you are in a _sandboxed_ environment, meaning you are able to safely explore and transform the data. The original dataset is not modified until you explicitly export your changes.
 
-### Connecting to a Python kernel
+### Launch Data Wrangler from a Jupyter Notebook
 
-There are currently two ways to connect to a Python kernel, as shown in the quick pick below.  
-![image](https://user-images.githubusercontent.com/8560030/225400310-cea6cf16-de2e-484d-b3d9-3c60ecb36b50.png)
+If you have a Pandas data frame in your notebook, you’ll now see an **Open 'df' in Data Wrangler** button (where `df` is the variable name of your data frame) appear in bottom of the cell after running any of `df.head()`, `df.tail()`, `display(df)`, `print(df)`, and `df`.
 
-#### 1. Connect using local Python interpreter
+![a screenshot showing the entry point into Data Wrangler from a notebook](https://github.com/microsoft/vscode-docs/assets/15910920/3d971723-d57a-4dd6-8bb9-6200777b3573)
 
-If this option is selected, then the kernel connection is created using the Jupyter and Python extensions. We recommend this option for a simple setup and quick way to get started with Data Wrangler.
+### Launch Data Wrangler directly from a file
 
-#### 2. Connect using Jupyter URL and token
+You can also launch Data Wrangler directly from a local file (such as a `.csv`). To do so, open any folder in VS Code that contains the file you’d like to open. In the File Explorer view, right click the file and click **Open in Data Wrangler**.
 
-If this option is selected, then a kernel connection is created using JupyterLab APIs. Note that there are performance benefits with this option since it bypasses some initialization and kernel discovery processes. However, it will also require separate user management of the Jupyter notebook server. We recommend this option generally in two cases: 1) if there are blocking issues in the first method and 2) for power users who would like to reduce the cold-start time of Data Wrangler.
+![a screenshot showing the entry point into Data Wrangler from a file](https://github.com/microsoft/vscode-docs/assets/15910920/517e1e29-ba45-4e24-87fb-adb53a6207f1)
 
-To set up a Jupyter notebook server and use it with this option, follow the steps below:
+## UI tour
 
-1. Install Jupyter. We recommend installing the free version of [Anaconda](https://www.anaconda.com/products/individual) which comes with Jupyter installed. Alternatively, follow the [official instructions](https://jupyter.org/install) to install it.
-2. In the appropriate environment (e.g. in an Anaconda prompt if Anaconda is used), launch the server with the following command (replace the jupyter token with your secure token):
-   `jupyter notebook --no-browser --NotebookApp.token='<your-jupyter-token>'`
-3. In Data Wrangler, connect using the address of the spawned server. E.g. http://localhost:8888 and pass in the token used in the previous step. Once configured, this information is cached locally and can automatically be reused for future connections.
+Data Wrangler has two modes when working with your data. The details for each mode are explained in the subsequent sections below.
 
-## Launching Data Wrangler
+1. **Viewing mode:** The viewing mode optimizes the interface for you to quickly view, filter and sort your data. This mode is great for doing initial exploration on the dataset.
+2. **Editing mode:** The Editing mode optimizes the interface for you to apply transformations, cleaning, or modifications to your dataset. As you apply these transformations in the interface, Data Wrangler automatically generates the relevant Pandas code, and this can be exported back into your notebook for reuse.
 
-Once Data Wrangler has been successfully installed, there are 2 ways to launch it in VS Code.
+Note: By default, Data Wrangler opens in the Viewing mode. You can change this behavior in the Settings editor `kb(workbench.settings.dataWrangler.startInEditModeForNotebookEntrypoints)`.
 
-### Launching Data Wrangler from a Jupyter Notebook
+### Viewing mode interface
 
-If you are in a Jupyter Notebook working with Pandas data frames, you’ll now see a “Launch Data Wrangler” button appear after running specific operations on your data frame, such as df.head(). Clicking the button will open a new tab in VS Code with the Data Wrangler interface in a sandboxed environment.
+![a screenshot showing the different components in the UI for Data Wrangler in Viewing mode](https://github.com/microsoft/vscode-docs/assets/15910920/16d7d4d9-63e8-459f-9b7c-5bb1908b245d)
 
-**Important note**:
-We currently only accept the following formats for launching:
+1. The **Data Summary** panel shows detailed summary statistics for your overall dataset or a specific column, if one is selected.
 
--   `df`
--   `df.head()`
--   `df.tail()`
+2. You can apply any **Data Filters/Sorts** on the column from the header menu of the column.
 
-Where `df` is the name of the data frame variable. The code above should appear at the end of a cell and without any comments or other code after it.
+3. Toggle between the **Viewing** or **Editing** mode of Data Wrangler to access the built-in data operations.
 
-![image](https://user-images.githubusercontent.com/2180824/218180019-d2c434dd-2a27-4355-a00a-f8ec09a1f828.png)
+4. The **Quick Insights** header is where you can quickly see valuable information about each column. Depending on the datatype of the column, quick insights shows the distribution of the data or the frequency of datapoints, as well as missing and distinct values.
 
-### Launching Data Wrangler directly from a CSV file
+5. The **Data Grid** gives you a scrollable pane where you can view your entire dataset.
 
-You can also launch Data Wrangler directly from a local CSV file. To do so, open any folder in VS Code that has the CSV dataset you’d like to explore. In the File Explorer panel, right click the .CSV dataset and click “Open in Data Wrangler”.
+---
 
-![image](https://user-images.githubusercontent.com/2180824/218180054-386cf32a-8876-48dd-8065-134d0bd932f0.png)
+### Editing mode interface
 
-## Using Data Wrangler
+Switching to Editing mode enables additional functionality and user interface elements in Data Wrangler. In the following screenshot, we use Data Wrangler to replace the missing values in the last column with the median of that column.
 
-![image](https://user-images.githubusercontent.com/2180824/218180077-8bbb9018-c67b-4fda-b4cd-9ea7c67eea5b.png)
+![a screenshot showing the different components in the UI for Data Wrangler in Editing mode](https://github.com/microsoft/vscode-docs/assets/15910920/8ec458aa-556d-4f03-beda-c86898d97112)
 
-The Data Wrangler interface is divided into 6 components, described below.
+1. The **Operations** panel is where you can search through all of Data Wrangler’s built-in data operations. The operations are organized by category.
 
-The **Quick Insights** header is where you can quickly see valuable information about each column. Depending on the datatype of the column, Quick Insights will show the distribution of the data or the frequency of datapoints, as well as missing and distinct values.
+2. The **Cleaning Steps** panel shows a list of all the operations that have been previously applied. It enables the user to undo specific operations or edit the _most recent_ operation. Selecting a step will highlight the changes in the data grid and will show the generated code associated with that operation.
 
-The **Data Grid** gives you a scrollable pane where you can view your entire dataset. Additionally, when selecting an operation to perform, a preview will be illustrated in the data grid, highlighting the modified columns.
+3. The **Export Menu** lets you export the code back into a Jupyter Notebook or export the data into a new file.
 
-The **Operations Panel** is where you can search through all of Data Wrangler’s built-in data operations. The operations are organized by their top-level category.
+4. When you have an operation selected and are previewing its effects on the data, the grid is overlayed with a **data diff** view of the changes you made to the data.
 
-The **Summary Panel** shows detailed summary statistics for your dataset or a specific column if one is selected. Depending on the datatype, it will show information such as min, max values, datatype of the column, skew, and more.
+5. The **Code Preview** section shows the Python and Pandas code that Data Wrangler has generated when an operation is selected. It remains empty when no operation is selected. You can edit the generated code, which results in the data grid highlighting the effects on the data.
 
-The **Operation History Panel** shows a human readable list of all the operations that have been previously applied in the current Data Wrangling session. It enables the user to undo specific operations or edit the most recent operation. Selecting a step will highlight the changes in the data grid and will show the generated code associated with that operation.
+## Example: Replace missing values in your dataset
 
-The **Code Preview** section will show the Python and Pandas code that Data Wrangler has generated when an operation is selected. It will remain blank when no operation is selected. The code can even be edited by the user, and the data grid will highlight the effect on the data.
+Given a dataset, one of the common data cleaning tasks is to handle any missing values that lie within the data. The example below shows how Data Wrangler can be used to replace the missing values in a column with the median value of that column. While the transformation is done through the interface, Data Wrangler also automatically generates the Python and Pandas code required for the replacement of missing values.
 
-### Example: Filtering a column
+![an example of using Data Wrangler to replace missing values in your dataset](https://github.com/microsoft/vscode-docs/assets/15910920/2235a291-e26f-4741-b5fc-bd570c8f66d1)
 
-Let’s go through a simple example using Data Wrangler with the Titanic dataset to filter adult passengers on the ship.
+1. In the **Operations Panel**, search for the **Fill Missing Values** operation.
+2. Specify in the parameters what you would like to replace the missing values with. In this case, we will be replacing the missing values with the median value for the column.
+3. Validate that the data grid is showing you the correct changes in the data diff.
+4. Validate that the code generated by Data Wrangler is what you intended.
+5. Apply the operation and it will be added to your cleaning steps history.
 
-We’ll start off by looking at the quick insights of the Age column, and we’ll notice the distribution of the ages and that the minimum age is 0.42. For more information, we can have a glance at the Summary panel to see that the datatype is a float, along with additional statistics such as the mean and median age of all the passengers.
+# Next steps
 
-![image](https://user-images.githubusercontent.com/2180824/218180630-73009474-54ff-439d-bd22-a3cc97363904.png)
+This page covered how to quickly get started with Data Wrangler. For the full documentation and tutorial of Data Wrangler, including all the built-in operations that Data Wrangler currently supports, please see the following page.
 
-To filter for only adult passengers, we can go to the Operation Panel and search for the keyword “Filter” to find the **Filter** operation. (You can also expand the “Sort and filter” category to find it.)
-
-![image](https://user-images.githubusercontent.com/2180824/218180718-1e6da67f-cf5c-43b8-be80-e22e722aa908.png)
-
-Once we select an operation, we are brought into the Operation Preview state where parameters can be modified to see how they affect the underlying dataset prior to applying the operation. In this example, we want to filter the dataset to only include adults, so we’ll want to filter the Age column to only include values greater than or equal to 18.
-
-![image](https://user-images.githubusercontent.com/2180824/218180755-3d9eb2d0-e4c0-4959-9ba1-75b19df047eb.png)
-
-Once the parameters are entered in the operation panel, we can see a preview of what will happen to the data. We’ll notice that the minimum value in age is now 18 in the Quick Insights, along with a visual preview of the rows that are being removed highlighted in red. Finally, we’ll also notice the Code Preview section automatically shows the code that Data Wrangler produced to execute this Filter operation. We can edit this code, such as change the filtered age to 21, and the data grid will automatically update accordingly.
-
-After confirming that the operation has the intended effect, we can click Apply.
-
-## Editing and exporting code
-
-Each step of the generated code can be modified. As you make changes, changes to the data will be highlighted in the grid view.
-
-Once you’re done with your data cleaning steps in Data Wrangler, there are 3 ways to export your cleaned dataset from Data Wrangler.
-
-1. Export code back to Notebook and exit: This creates a new cell in your Jupyter Notebook with all the data cleaning code you generated packaged up into a clean Python function.
-2. Export data as CSV: This saves the cleaned dataset as a new CSV file onto your machine.
-3. Copy code to clipboard: This copies all the code that was generated by Data Wrangler for the data cleaning operations.
-
-![image](https://user-images.githubusercontent.com/2180824/218180955-ed417931-5337-4c8a-93c7-36a6b3c13332.png)
-
-Note: If you launched Data Wrangler directly from a CSV, the first export option will be to export the code into a new Jupyter Notebook.
-
-## Data Wrangler operations
-
-These are the Data Wrangler operations that are currently supported in the initial launch of Data Wrangler (with many more to be added in the near future).
-
-| Operation                      | Description                                                                                           |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------- |
-| Sort values                    | Sort column(s) ascending or descending                                                                |
-| Filter                         | Filter rows based on one or more conditions                                                           |
-| Calculate text length          | Create new column with values equal to the length of each string value in a text column               |
-| One-hot encode                 | Split categorical data into a new column for each category                                            |
-| Multi-label binarizer          | Split categorical data into a new column for each category using a delimiter                          |
-| Create column from formula     | Create a column using a custom Python formula                                                         |
-| Change column type             | Change the data type of a column                                                                      |
-| Drop column                    | Delete one or more columns                                                                            |
-| Select column                  | Choose one or more columns to keep and delete the rest                                                |
-| Rename column                  | Rename one or more columns                                                                            |
-| Drop missing values            | Remove rows with missing values                                                                       |
-| Drop duplicate rows            | Drops all rows that have duplicate values in one or more columns                                      |
-| Fill missing values            | Replace cells with missing values with a new value                                                    |
-| Find and replace               | Replace cells with exact matching pattern                                                             |
-| Group by column and aggregate  | Group by columns and aggregate results                                                                |
-| Strip whitespace               | Remove whitespace from the beginning and end of text                                                  |
-| Split text                     | Split a column into several columns based on a user defined delimiter                                 |
-| Capitalize first character     | Converts first character to uppercase and remaining to lowercase                                      |
-| Convert text to lowercase      | Convert text to lowercase                                                                             |
-| Convert text to uppercase      | Convert text to UPPERCASE                                                                             |
-| String transform by example    | Automatically perform string transformations when a pattern is detected from the examples you provide |
-| DateTime formatting by example | Automatically perform DateTime formatting when a pattern is detected from the examples you provide    |
-| New column by example          | Automatically create a column when a pattern is detected from the examples you provide.               |
-| Scale min/max values           | Scale a numerical column between a minimum and maximum value                                          |
-| Custom operation               | Automatically create a new column based on examples and the derivation of existing column(s)          |
-
-## Troubleshooting
-
-### General kernel connectivity issues
-
-For general connectivity issues, please see the "Connecting to a Python kernel" section above on alternative methods to connect. To debug issues related to the local Python interpreter option, one way to potentially fix the issue would be to try installing different versions of the Jupyter and Python extensions. For example, if stable versions of the extensions are installed then one could try installing the pre-release (and vice versa). If the issue is new, then consider reverting to a previous version.
-
-To clear an already cached kernel, you can run the `Data Wrangler: Clear cached runtime` command from the command palette (Ctrl/Cmd+Shift+P).
-
-### UnicodeDecodeError
-
-If you run into a UnicodeDecodeError when opening a data file directly from Data Wrangler, then this could be caused by two possible issues:
-
-1. The file you're trying to open has an encoding other than utf-8, and/or
-2. The file is corrupted.
-
-To work around this error, you’ll need to open Data Wrangler from a Jupyter Notebook instead of directly from a data file. Use a Jupyter Notebook to read the file using Pandas, for example using the [read_csv](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html) method. Within that read method, use the _encoding_ and/or _encoding_errors_ parameters to define the encoding to use or how to handle encoding errors. If you don’t know which encoding might work for this file, you can try a library such as [chardet](https://github.com/chardet/chardet) to try to infer an encoding that works.
+[Working with Data Wrangler](https://code.visualstudio.com/docs/datascience/data-wrangler)
 
 ## Questions and feedback
 
