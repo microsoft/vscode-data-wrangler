@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.0.2
+### Updates
+-   Added support for additional DataFrame types.
+
 ## Version 1.0.0
 ### Updates
 - **Web support added! 🎉** Data Wrangler is now supported in the browser for notebook entry points. You can try installing the extension in vscode.dev.
