@@ -1,8 +1,20 @@
 # Changelog
 
+## Version 1.2.0
+### Updates
+- Improved performance of column statistics calculations when working with non-hashable data, especially numpy arrays.
+- Added handling for Python `bytes` data with invalid UTF-8 sequences.
+- “By Example” operations no longer fail after a timeout and can now be cancelled if it is taking too long. This allows the user to have more flexibility to decide if they want to wait for more complex generations.
+- Added support for launching Data Wrangler from the "View Value in Data Viewer" debugger variables context menu for both `.py` and `.ipynb` files. Please ensure that you are using VS Code version 1.90.0 or higher (Insiders only as of May 31 2024) and using the latest `prerelease` version of the Jupyter extension.
+
+### Bugfixes
+- Fixed an issue affecting Mac machines where certain input events such as copy pasting and selecting all text were not working in the Viewing mode filter context menu form.
+- Fixed an issue that could prevent Data Wrangler from opening on systems with improperly configured locales.
+- Fixed an issue where Data Wrangler launch would hang when opening from an interactive notebook with an active debug session.
+
 ## Version 1.0.2
 ### Updates
--   Added support for additional DataFrame types.
+- Added support for additional DataFrame types.
 
 ## Version 1.0.0
 ### Updates
