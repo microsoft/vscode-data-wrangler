@@ -16,6 +16,8 @@ The goal of this page is to help you quickly get up and running with Data Wrangl
 
 When you launch Data Wrangler for the first time, it asks you which Python kernel you would like to connect to. It also checks your machine and environment to see if the required Python packages are installed, such as Pandas.
 
+Note: to use a local Python interpreter as a runtime, you will need to first install both the [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) and [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) extensions.
+
 ## Open Data Wrangler
 
 Anytime you are in Data Wrangler, you are in a _sandboxed_ environment, meaning you are able to safely explore and transform the data. The original dataset is not modified until you explicitly export your changes.
