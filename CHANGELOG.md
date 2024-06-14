@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.2.1
+### Bugfixes
+- Fixed an issue causing spurious error messages when the new Jupyter extension API is enabled.
+
 ## Version 1.2.0
 ### Updates
 - Improved performance of column statistics calculations when working with non-hashable data, especially numpy arrays.
