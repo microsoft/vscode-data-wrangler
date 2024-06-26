@@ -1,5 +1,17 @@
 # Changelog
 
+## Version 1.4.0
+### Updates
+- Added basic support for displaying nested DataFrames and Series in the grid as text.
+- Added support for GPU-backed and sparse PyTorch tensors.
+- When exporting to CSV, the data index will now be included if it has been changed from the default index (for example if `set_index` has been used).
+- Custom operations now use isolated scoping. This means that variables declared in operations are now fully isolated from one another and can be easily undone when the operation is removed.
+- Data Wrangler is now supported on local VS Code servers started with `code serve-web`.
+- Removed dependency on setuptools. This will remove an extra install step needed for environments that do not have it.
+
+### Bugfixes
+- Fixed an issue where backslashes were double-escaped in the code to load data from a file.
+
 ## Version 1.2.1
 ### Bugfixes
 - Fixed an issue causing spurious error messages when the new Jupyter extension API is enabled.
