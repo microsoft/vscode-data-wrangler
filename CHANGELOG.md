@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.4.1
+### Bugfixes
+- Fixed an issue causing data export (ie. to CSV or Parquet) to fail when debugging a Python file.
+
 ## Version 1.4.0
 ### Updates
 - Added basic support for displaying nested DataFrames and Series in the grid as text.
