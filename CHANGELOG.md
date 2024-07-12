@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.4.2
+### Bugfixes
+- Fixed an issue where the filter menu would sometimes disappear when working with certain datasets.
+
 ## Version 1.4.1
 ### Bugfixes
 - Fixed an issue causing data export (ie. to CSV or Parquet) to fail when debugging a Python file.
