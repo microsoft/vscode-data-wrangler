@@ -1,5 +1,21 @@
 # Changelog
 
+## Version 1.6.0
+### Updates
+- Raised the minimum required version of Pandas from 0.25.4 to 1.2.0.
+- Added support for the "View data" toolbar menu in interactive window notebook.
+- Shortened tab length and swapped editor icon to use color.
+- Updated overflow logic for numeric fields to hide from the right side instead of the left.
+- Small theming improvements.
+
+### Bugfixes
+- Fixed an issue where numeric data could be incorrectly formatted under certain circumstances such as when there is a column of complex values elsewhere.
+- Fixed an issue where the notebook kernel for IPYNB files was not always automatically reconnecting after a debug session terminated.
+- Fixed an issue where the datetime picker would render incorrectly when using the "Find and replace" operation on a datetime field.
+- Fixed an issue where missing dependencies were not being prompted for install.
+- Fixed an issue where package dependencies may not be correctly detected in some Python configurations.
+- Fixed an issue where opening Data Wrangler from a long file path with the "Debug" setting enabled would cause stability issues.
+
 ## Version 1.4.2
 ### Bugfixes
 - Fixed an issue where the filter menu would sometimes disappear when working with certain datasets.
