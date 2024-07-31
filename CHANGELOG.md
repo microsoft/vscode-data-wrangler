@@ -9,14 +9,14 @@
 - Small theming improvements.
 
 ### Bugfixes
-- Fixed an issue where the "Custom operation" help text could display the variable name incorrectly.
-- Fixed an issue where the notebook kernel for IPYNB files was not always automatically reconnecting after a debug session terminated.
-- Fixed an issue where opening Data Wrangler from a long file path with the "Debug" setting enabled would cause stability issues.
 - Fixed an issue where numeric data could be incorrectly formatted under certain circumstances such as when there is a column of complex values elsewhere.
-- Fixed an issue where missing dependencies were not being prompted for install.
+- Fixed an issue where the notebook kernel for IPYNB files was not always automatically reconnecting after a debug session terminated.
 - Fixed an issue where the datetime picker would render incorrectly when using the "Find and replace" operation on a datetime field.
-- Fixed an issue where Data Wrangler could fail to open if the "Use Jupyter Proposed API" setting is enabled but an older version of the Jupyter extension is - installed.
+- Fixed an issue where Data Wrangler could fail to open if the "Use Jupyter Proposed API" setting is enabled but an older version of the Jupyter extension is installed.
+- Fixed an issue where missing dependencies were not being prompted for install.
 - Fixed an issue where package dependencies may not be correctly detected in some Python configurations.
+- Fixed an issue where opening Data Wrangler from a long file path with the "Debug" setting enabled would cause stability issues.
+- Fixed an issue where the "Custom operation" help text could display the variable name incorrectly.
 
 ## Version 1.4.2
 ### Bugfixes
