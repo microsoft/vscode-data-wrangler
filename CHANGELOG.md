@@ -10,7 +10,7 @@
 
 ### Bugfixes
 - Fixed a launch issue affecting interactive window Python debugging using older IPython versions.
-- Fixed an issue that could cause datasets with extremely long values to get stuck loading indefinitely.
+- Fixed an issue that could cause datasets with extremely long string values to get stuck loading indefinitely.
 
 ## Version 1.6.0
 ### Updates
