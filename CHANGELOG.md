@@ -1,5 +1,17 @@
 # Changelog
 
+## Version 1.8.0
+### Updates
+- Added extra fallback for debug launch scenario to help increase reliability.
+- Added an option to disable showing column header stats on initialization. This can be useful in some workflows where column stats are not needed.
+- New operation parameters
+  - (Drop missing values) specify how many values must be missing from the selected columns for a row to be dropped.
+  - (Split text) specify a maximum number of splits allowed.
+
+### Bugfixes
+- Fixed a launch issue affecting interactive window Python debugging using older IPython versions.
+- Fixed an issue that could cause datasets with extremely long string values to get stuck loading indefinitely.
+
 ## Version 1.6.0
 ### Updates
 - Raised the minimum required version of Pandas from 0.25.4 to 1.2.0.
