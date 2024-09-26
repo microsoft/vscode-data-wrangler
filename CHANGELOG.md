@@ -3,7 +3,7 @@
 ## Version 1.10.0
 ### Updates
 - Improved error messaging for unsupported variable types.
-- Added experimental support for loading PySpark variables. This can be enabled using the `dataWrangler.experiments.datatypes.pyspark` setting.
+- Added experimental support for loading PySpark DataFrame variables. This can be enabled using the `dataWrangler.experiments.datatypes.pyspark` setting.
 - Added experimental support for JSONL files. This can be enabled using the `dataWrangler.enabledFileTypes.jsonl` setting.
 
 ### Bugfixes
