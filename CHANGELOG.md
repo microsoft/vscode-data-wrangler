@@ -1,5 +1,20 @@
 # Changelog
 
+## Version 1.10.0
+### Updates
+- Improved error messaging for unsupported variable types.
+- Added experimental support for loading PySpark variables. This can be enabled using the `dataWrangler.experiments.datatypes.pyspark setting`.
+- Added experimental support for JSONL files. This can be enabled using the `dataWrangler.enabledFileTypes.jsonl` setting.
+
+### Bugfixes
+- Fixed an issue where the order of copied rows was sorted incorrectly.
+- Fixed an issue where overridden built-ins could cause launch to fail.
+
+## Version 1.8.1
+## Bugfixes
+- Fixed an issue causing the extension to crash on older VS Code versions.
+- Fixed an issue preventing subsequent debug data viewer launches when multiple debug sessions have the same ID.
+
 ## Version 1.8.0
 ### Updates
 - Added extra fallback for debug launch scenario to help increase reliability.
