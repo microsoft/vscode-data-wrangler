@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.12.0
+### Updates
+- Added a new Copilot-powered prompt widget above the code editor to generate data-aware code using natural language. This feature can be enabled from the VS Code extension settings page for Data Wrangler, and requires both the [GitHub Copilot Chat VS Code extension](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) and having an active [Copilot Subscription](https://github.com/features/copilot).
+
 ## Version 1.10.0
 ### Updates
 - Improved error messaging for unsupported variable types.
