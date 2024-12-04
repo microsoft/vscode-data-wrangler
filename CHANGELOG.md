@@ -1,5 +1,27 @@
 # Changelog
 
+## Version 1.14.0
+### Updates
+- Added new setting `config.dataWrangler.panels.displayOnTabFocus` which can optionally disable panels from being shown during startup and on focus.
+- Sorting and filtering by the index column is now supported. The index can also be renamed when in editing mode.
+- Removed the header text label for default (unmodified) index columns.
+- Column insights and summary stats are now shown for user-set index columns.
+- Added support for copying cell contents using keyboard shortcuts (ctrl+C or cmd+C).
+- Added optimizations for variable import to support different viewing strategies, which should generally improve the layout of the data on import (e.g., support for list of dictionaries, using index orientation for flat dictionaries).
+- Added support for PySpark connect DataFrames.
+- Derivative DataFrame classes are now supported when Pandas converters exist (e.g., toPandas(), to_pandas(), interchange API).
+- Added ability to edit the initial code when importing a variable, similar to how it is possible to edit for file imports.
+- Improvements to automatically generated diffs when previewing custom operations.
+- Removed the "Use Jupyter Proposed API" setting. The API is stable and now used by default.
+- Show a more descriptive error message when access has not been granted to the Jupyter kernel.
+- Added a warning message for users with invalid `extensions.experimental.affinity` setting.
+- Small context menu style tweaks.
+
+### Bugfixes
+- Fixed an issue where the "missing value" label would sometimes not be visible in the grid.
+- Fixed an issue where the second click on a sort/filter view tag would not close the context menu.
+- Fixed an issue where filtering for isMissing or isNotMissing in compatibility mode would no-op as values are always casted to strings.
+
 ## Version 1.12.0
 ### Updates
 - Added a new Copilot-powered prompt widget above the code editor to generate data-aware code using natural language. This feature can be enabled from the VS Code extension settings page for Data Wrangler, and requires both the [GitHub Copilot Chat VS Code extension](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) and having an active [Copilot Subscription](https://github.com/features/copilot).
