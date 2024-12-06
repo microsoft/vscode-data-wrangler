@@ -2,19 +2,19 @@
 
 ## Version 1.14.0
 ### Updates
-- Added new setting `config.dataWrangler.panels.displayOnTabFocus` which can optionally disable panels from being shown during startup and on focus.
+- Added new setting `config.dataWrangler.panels.displayOnTabFocus` which can optionally disable Data Wrangler's bottom and side panels from being automatically re-opened when a user starts Data Wrangler or clicks on one of its windows.
 - Sorting and filtering by the index column is now supported. The index can also be renamed when in editing mode.
 - Removed the header text label for default (unmodified) index columns.
 - Column insights and summary stats are now shown for user-set index columns.
 - Added support for copying cell contents using keyboard shortcuts (ctrl+C or cmd+C).
 - Added optimizations for variable import to support different viewing strategies, which should generally improve the layout of the data on import (e.g., support for list of dictionaries, using index orientation for flat dictionaries).
-- Added support for PySpark connect DataFrames.
+- Added support for PySpark Connect DataFrames.
 - Derivative DataFrame classes are now supported when Pandas converters exist (e.g., toPandas(), to_pandas(), interchange API).
 - Added ability to edit the initial code when importing a variable, similar to how it is possible to edit for file imports.
 - Improvements to automatically generated diffs when previewing custom operations.
 - Removed the "Use Jupyter Proposed API" setting. The API is stable and now used by default.
 - Show a more descriptive error message when access has not been granted to the Jupyter kernel.
-- Added a warning message for users with invalid `extensions.experimental.affinity` setting.
+- Added a warning message for users with invalid `extensions.experimental.affinity` setting. Namely, when the affinity value doesn't match the one set in all the extensions that Data Wrangler depends on.
 - Small context menu style tweaks.
 
 ### Bugfixes
