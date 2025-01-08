@@ -14,6 +14,7 @@
 - Fixed a styling issue causing panels to use the wrong background color.
 - Fixed an issue causing performance issues when loading DataFrames using the interchange protocol API.
 - Fixed an issue where the Ctrl+Tab VS Code shortcut would not work when the data grid was focused.
+- Fixed an error that could occur when previewing changes to nested arrays.
 
 ## Version 1.14.0
 ### Updates
