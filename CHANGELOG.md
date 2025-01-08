@@ -1,5 +1,20 @@
 # Changelog
 
+## Version 1.16.0
+### Updates
+- Optimized loading performance when viewing datasets that present specific cases like memory fragmentation, or low kernel performance.
+- Improvements to the loading view with an updated shimmer.
+- Reduced jitteriness when applying operations while scrolled down in the grid.
+- Added new quick filter mode to search for values by string. This should help address the need for simple faster filtering. The original filter menu can be accessed by showing advanced options or shown by default using the `dataWrangler.defaultViewingFilterOptions` setting.
+- Updated the column width default to be a fixed width of 200px. This value is configurable with the `dataWrangler.grid.defaultColumnWidth` setting.
+- Improved the display of columns at smaller widths by condensing column insights and header buttons.
+
+### Bugfixes
+- Fixed an issue where a named index would not be included in CSV exports if it was a MultiIndex.
+- Fixed a styling issue causing panels to use the wrong background color.
+- Fixed an issue causing performance issues when loading DataFrames using the interchange protocol API.
+- Fixed an issue where the Ctrl+Tab VS Code shortcut would not work when the data grid was focused.
+
 ## Version 1.14.0
 ### Updates
 - Added new setting `config.dataWrangler.panels.displayOnTabFocus` which can optionally disable Data Wrangler's bottom and side panels from being automatically re-opened when a user starts Data Wrangler or clicks on one of its windows.
