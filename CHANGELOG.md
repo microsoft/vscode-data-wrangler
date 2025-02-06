@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/76b0901f-88f5-4e92-aaa7-b25da2472267)# Changelog
+# Changelog
 
 ## Version 1.18.0
 ### Updates
