@@ -1,5 +1,15 @@
 # Changelog
 
+## Version 1.18.0
+### Updates
+- Data Wrangler is now supported in Jupyter notebook outputs! 🎉 The new output renderer provides a compact viewer for quick explorations within the notebook and can be invoked by producing a Pandas DataFrame expression in the last line of a cell or by displaying it with `display(<expression>)`.
+- The Copilot prompt widget for Edit mode is now shown by default to help users discover GitHub Copilot Free. This can be disabled by setting `dataWrangler.experiments.copilot.enabled` to false.
+- CSV file export now preserves the initial delimiter if opened from a CSV file.
+
+### Bugfixes
+- Fixed an issue where changing a kernel would still use the old cached kernel until VS Code was reloaded.
+- Fixed a few minor styling issues.
+
 ## Version 1.16.0
 ### Updates
 - Optimized loading performance when viewing datasets that present specific cases like memory fragmentation, or low kernel performance.
