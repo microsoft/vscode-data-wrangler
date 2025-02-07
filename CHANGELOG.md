@@ -1,6 +1,10 @@
 # Changelog
 
 ## Version 1.18.0
+### Bugfixes
+- Fixed an issue where the output renderer was not rendering correctly in vscode.dev.
+
+## Version 1.18.0
 ### Updates
 - Data Wrangler is now supported in Jupyter notebook outputs! 🎉 The new output renderer provides a compact viewer for quick explorations within the notebook and can be invoked by producing a Pandas DataFrame expression in the last line of a cell or by displaying it with `display(<expression>)`.
 - The Copilot prompt widget for Edit mode is now shown by default to help users discover GitHub Copilot Free. This can be disabled by setting `dataWrangler.experiments.copilot.enabled` to false.
