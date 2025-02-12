@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 1.18.2
+- General bugfixes and improvements.
+
 ## Version 1.18.1
 ### Bugfixes
 - Fixed an issue where the output renderer was not rendering correctly in vscode.dev.
