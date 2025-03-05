@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.20.1
+### Bugfixes
+- Fixed an issue where output references were not being properly disposed.
+
 ## Version 1.20.0
 ### Updates
 - Improved the display of error messages shown before the data is loaded.
