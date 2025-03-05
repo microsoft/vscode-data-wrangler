@@ -1,5 +1,20 @@
 # Changelog
 
+## Version 1.20.0
+### Updates
+- Improved the display of error messages shown before the data is loaded.
+- Added an indicator next to required fields for improved clarity.
+
+### Accessibility improvements
+- Added screen reader announcement when searching for operations and there are no results
+- Improved labeling of form fields and buttons in filter operations.
+
+### Bugfixes
+- Fixed an issue where an error message appeared in the output above DataFrames that subclass Pandas DataFrames (e.g., GeoDataFrame).
+- Fixed an issue where a KeyError would sometimes be thrown when launching Data Wrangler while debugging with Python 3.12.
+- Fixed an issue where changing kernels could fail if the currently selected kernel had also failed to load the data, such as due to missing dependencies.
+- Fixed a few minor styling issues.
+
 ## Version 1.18.2
 - General bugfixes and improvements.
 
