@@ -1,5 +1,18 @@
 # Changelog
 
+## Version 1.22.0
+### Updates
+- Added opt-in setting `dataWrangler.outputRenderer.enabledTypes` to enable the Data Wrangler output renderer for additional supported data types in the Jupyter notebook, including Polars, Numpy, and more.
+- Added a data slicing control to improve viewing scenarios when working with multi-dimensional data (previously, it was only possible to view multidimensional data as nested lists within table cells which was not very useful). For more information on the supported types and usage, see the following [wiki](https://github.com/microsoft/vscode-data-wrangler/wiki/Slicing-data-using-the-slice-control).
+- File exports now use less memory and make fewer calls to the runtime.
+- The sum of values in numeric columns can now be seen via the statistics panel.
+- Added additional Python version metadata to the runtime selection dropdown to help clarify Python environments when loading local files.
+
+### Bugfixes
+- Fixed an issue where FlashFill operation type metadata was not being preserved, which led to certain non-string columns being treated as strings.
+- Fixed an issue where certain variable names were being clobbered, which led to some variables with specific names being unable to be launched while debugging.
+- Fixed an issue where exporting data when editing an output created with `display()` would fail.
+
 ## Version 1.20.1
 ### Bugfixes
 - Fixed an issue where output references were not being properly disposed.
