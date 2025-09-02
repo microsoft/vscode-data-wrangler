@@ -5,7 +5,7 @@
  - 🐼 Automatic Pandas code preview & export
  - 🚀 Launch from CSV/Parquet/Excel/Jsonl files or Jupyter notebooks
  - 🤖 GitHub Copilot integration: just ask it to perform the data operations you need
- - ⚙️ Give it an example and it will figure out the rest of the rows based on it
+ - ⚙️ FlashFill integration: Provide an example to automatically fill all remaining rows in a column
 
 [Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) is a data viewing and cleaning tool that is integrated into VS Code and VS Code Jupyter Notebooks. It provides a rich user interface to view and analyze your data, show insightful column statistics and visualizations, and can automatically generate Pandas code as you clean and transform the data if that's your goal.
 
@@ -37,9 +37,9 @@ Anytime you are in Data Wrangler, you are in a _sandboxed_ environment, meaning 
 
 If you have a Pandas data frame in your notebook, you can explore its contents using Data Wrangler without leaving the notebook’s output cell since it is seamlessly integrated into one experience.
 
-![a gif of viewing the contents of a Pandas dataframe using the integrated Data Wrangler experience from inside the notebooks output cell.](https://github.com/microsoft/vscode-data-wrangler/blob/main/assets/data-wrangler-marketplace-output-mode.png?raw=true)
+![a gif of viewing the contents of a Pandas data frame using the integrated Data Wrangler experience from inside the notebooks output cell.](https://github.com/microsoft/vscode-data-wrangler/blob/main/assets/data-wrangler-marketplace-output-mode.png?raw=true)
 
-From here, you can also launch Data Wrangler in full screen mode by simply clicking the Open ‘df’ in Data Wrangler button.
+You’ll also see an **Open 'df' in Data Wrangler** button (where `df` is the variable name of your data frame) appear in bottom of the cell after running any of `df.head()`, `df.tail()`, `display(df)`, `print(df)`, and `df`. This button launches Data Wrangler in full screen mode.
 
 ![a screenshot showing the entry point into Data Wrangler from a notebook](https://github.com/microsoft/vscode-data-wrangler/blob/main/assets/data-wrangler-marketplace-open-df.png?raw=true)
 
