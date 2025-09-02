@@ -1,8 +1,19 @@
 # Data Wrangler Extension for Visual Studio Code
 
-[Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) is a code-centric data viewing and cleaning tool that is integrated into VS Code and VS Code Jupyter Notebooks. It provides a rich user interface to view and analyze your data, show insightful column statistics and visualizations, and automatically generate Pandas code as you clean and transform the data.
+ - 📊 Visualize & filter large tabular datasets
+ - 🧹 One-click transforms (fill, drop, type-cast…)
+ - 🐼 Automatic Pandas code preview & export
+ - 🚀 Launch from CSV/Parquet/Excel/Jsonl files or Jupyter notebooks
+ - 🤖 GitHub Copilot integration: just ask it to perform the data operations you need
+ - ⚙️ FlashFill integration: Provide an example to automatically fill all remaining rows in a column
 
-The following is an example of opening Data Wrangler from the notebook to analyze and clean the data with the built-in operations. Then the automatically generated code is exported back into the notebook.
+[Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) is a data viewing and cleaning tool that is integrated into VS Code and VS Code Jupyter Notebooks. It provides a rich user interface to view and analyze your data, show insightful column statistics and visualizations, and can automatically generate Pandas code as you clean and transform the data if that's your goal.
+
+**Data Exploration**
+
+![a gif of opening Data Wrangler from a .csv file, looking through the data, navigating to specific columns, viewing column statistics, sorting columns, and applying column filters.](https://github.com/microsoft/vscode-data-wrangler/blob/bd86979f293036db078028a0268c1b36b226caca/assets/data-wrangler-marketplace-data-exploration.gif?raw=true)
+
+**Data Preparation**
 
 ![a gif of opening Data Wrangler from a notebook, looking through the data, switching from Viewing to Editing mode, applying data transformations, and exporting the generated Python code back into the notebook](https://github.com/microsoft/vscode-docs/assets/15910920/1a6d8fd1-6454-4289-b8c4-fe84050ae981)
 
@@ -22,11 +33,15 @@ Note: to use a local Python interpreter as a runtime, you will need to first ins
 
 Anytime you are in Data Wrangler, you are in a _sandboxed_ environment, meaning you are able to safely explore and transform the data. The original dataset is not modified until you explicitly export your changes.
 
-### Launch Data Wrangler from a Jupyter Notebook
+### Data Wrangler with Jupyter Notebooks
 
-If you have a Pandas data frame in your notebook, you’ll now see an **Open 'df' in Data Wrangler** button (where `df` is the variable name of your data frame) appear in bottom of the cell after running any of `df.head()`, `df.tail()`, `display(df)`, `print(df)`, and `df`.
+If you have a Pandas data frame in your notebook, you can explore its contents using Data Wrangler without leaving the notebook’s output cell since it is seamlessly integrated into one experience.
 
-![a screenshot showing the entry point into Data Wrangler from a notebook](https://github.com/microsoft/vscode-docs/assets/15910920/3d971723-d57a-4dd6-8bb9-6200777b3573)
+![a gif of viewing the contents of a Pandas data frame using the integrated Data Wrangler experience from inside the notebooks output cell.](https://github.com/microsoft/vscode-data-wrangler/blob/main/assets/data-wrangler-marketplace-output-mode.png?raw=true)
+
+You’ll also see an **Open 'df' in Data Wrangler** button (where `df` is the variable name of your data frame) appear in bottom of the cell after running any of `df.head()`, `df.tail()`, `display(df)`, `print(df)`, and `df`. This button launches Data Wrangler in full screen mode.
+
+![a screenshot showing the entry point into Data Wrangler from a notebook](https://github.com/microsoft/vscode-data-wrangler/blob/main/assets/data-wrangler-marketplace-open-df.png?raw=true)
 
 ### Launch Data Wrangler directly from a file
 
